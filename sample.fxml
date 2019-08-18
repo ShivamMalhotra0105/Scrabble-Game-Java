@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="AnchorPane" prefHeight="630" prefWidth="360" fx:controller="sample.Controller">
+    <children>
+        <Label layoutX="40" layoutY="120" minHeight="16" minWidth="280" maxWidth="280" fx:id="errorLabel" visible="false" textFill="RED">
+            <font>
+                <Font size="28"/>
+            </font>
+        </Label>
+
+        <VBox alignment="TOP_CENTER" fx:id="gameroot" >
+            <children>
+                <HBox fx:id="top1" spacing="15"  alignment="CENTER_LEFT" >
+                    <VBox.margin>
+                        <Insets top="10" left="40" right="40" />
+                    </VBox.margin>
+                    <children>
+                        <Label text="Total Score:">
+                            <font>
+                                <Font size="20"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="totalScoreLabel" text="0">
+                            <font>
+                                <Font size="20"/>
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox fx:id="top2" spacing="15"  alignment="CENTER" maxWidth="Infinity">
+                    <VBox.margin>
+                        <Insets top="10" left="40" right="40" />
+                    </VBox.margin>
+                    <children>
+                        <TextField fx:id="word" prefColumnCount="9"  promptText="Enter word" maxWidth="Infinity" style="-fx-font-size: 32pt;">
+                        </TextField>
+                    </children>
+                </HBox>
+                <HBox fx:id="top3" alignment="TOP_CENTER">
+                    <VBox.margin>
+                        <Insets top="30" left="40" right="40" />
+                    </VBox.margin>
+                    <children>
+                        <GridPane>
+                            <columnConstraints>
+                                <ColumnConstraints minWidth="40.0" maxWidth="40.0" />
+                                <ColumnConstraints minWidth="40.0" maxWidth="40.0" />
+                                <ColumnConstraints minWidth="40.0" maxWidth="40.0" />
+                                <ColumnConstraints minWidth="40.0" maxWidth="40.0" />
+                                <ColumnConstraints minWidth="40.0" maxWidth="40.0" />
+                                <ColumnConstraints minWidth="40.0" maxWidth="40.0" />
+                                <ColumnConstraints minWidth="40.0" maxWidth="40.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="70.0" maxHeight="70.0" />
+                                <RowConstraints minHeight="70.0" maxHeight="70.0" />
+                                <RowConstraints minHeight="70.0" maxHeight="70.0" />
+                                <RowConstraints minHeight="70.0" maxHeight="70.0" />
+                            </rowConstraints>
+                            <children>
+                                <VBox  GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                    <children>
+                                        <Label text="A" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="38" maxHeight="38" style="-fx-background-color: #3055FF;-fx-background-radius: 5" textFill="WHITE">
+                                            <font>
+                                                <Font size="30"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="numberA" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="20" maxHeight="20">
+                                            0
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox  GridPane.columnIndex="1" GridPane.rowIndex="0">
+                                    <children>
+                                        <Label text="B" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="38" maxHeight="38" style="-fx-background-color: #3055FF;-fx-background-radius: 5" textFill="WHITE">
+                                            <font>
+                                                <Font size="30"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="numberB" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="20" maxHeight="20">
+                                            0
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox  GridPane.columnIndex="2" GridPane.rowIndex="0">
+                                    <children>
+                                        <Label text="C" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="38" maxHeight="38" style="-fx-background-color: #3055FF;-fx-background-radius: 5" textFill="WHITE">
+                                            <font>
+                                                <Font size="30"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="numberC" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="20" maxHeight="20">
+                                            0
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox  GridPane.columnIndex="3" GridPane.rowIndex="0">
+                                    <children>
+                                        <Label text="D" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="38" maxHeight="38" style="-fx-background-color: #3055FF;-fx-background-radius: 5" textFill="WHITE">
+                                            <font>
+                                                <Font size="30"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="numberD" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="20" maxHeight="20">
+                                            0
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox  GridPane.columnIndex="4" GridPane.rowIndex="0">
+                                    <children>
+                                        <Label text="E" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="38" maxHeight="38" style="-fx-background-color: #3055FF;-fx-background-radius: 5" textFill="WHITE">
+                                            <font>
+                                                <Font size="30"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="numberE" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="20" maxHeight="20">
+                                            0
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox  GridPane.columnIndex="5" GridPane.rowIndex="0">
+                                    <children>
+                                        <Label text="F" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="38" maxHeight="38" style="-fx-background-color: #3055FF;-fx-background-radius: 5" textFill="WHITE">
+                                            <font>
+                                                <Font size="30"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="numberF" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="20" maxHeight="20">
+                                            0
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox  GridPane.columnIndex="6" GridPane.rowIndex="0">
+                                    <children>
+                                        <Label text="G" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="38" maxHeight="38" style="-fx-background-color: #3055FF;-fx-background-radius: 5" textFill="WHITE">
+                                            <font>
+                                                <Font size="30"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="numberG" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="20" maxHeight="20">
+                                            0
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox  GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                    <children>
+                                        <Label text="H" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="38" maxHeight="38" style="-fx-background-color: #3055FF;-fx-background-radius: 5" textFill="WHITE">
+                                            <font>
+                                                <Font size="30"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="numberH" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="20" maxHeight="20">
+                                            0
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox  GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <children>
+                                        <Label text="I" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="38" maxHeight="38" style="-fx-background-color: #3055FF;-fx-background-radius: 5" textFill="WHITE">
+                                            <font>
+                                                <Font size="30"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="numberI" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="20" maxHeight="20">
+                                            0
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox  GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                    <children>
+                                        <Label text="J" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="38" maxHeight="38" style="-fx-background-color: #3055FF;-fx-background-radius: 5" textFill="WHITE">
+                                            <font>
+                                                <Font size="30"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="numberJ" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="20" maxHeight="20">
+                                            0
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox  GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                    <children>
+                                        <Label text="K" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="38" maxHeight="38" style="-fx-background-color: #3055FF;-fx-background-radius: 5" textFill="WHITE">
+                                            <font>
+                                                <Font size="30"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="numberK" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="20" maxHeight="20">
+                                            0
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox  GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                    <children>
+                                        <Label text="L" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="38" maxHeight="38" style="-fx-background-color: #3055FF;-fx-background-radius: 5" textFill="WHITE">
+                                            <font>
+                                                <Font size="30"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="numberL" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="20" maxHeight="20">
+                                            0
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox  GridPane.columnIndex="5" GridPane.rowIndex="1">
+                                    <children>
+                                        <Label text="M" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="38" maxHeight="38" style="-fx-background-color: #3055FF;-fx-background-radius: 5" textFill="WHITE">
+                                            <font>
+                                                <Font size="30"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="numberM" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="20" maxHeight="20">
+                                            0
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox  GridPane.columnIndex="6" GridPane.rowIndex="1">
+                                    <children>
+                                        <Label text="N" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="38" maxHeight="38" style="-fx-background-color: #3055FF;-fx-background-radius: 5" textFill="WHITE">
+                                            <font>
+                                                <Font size="30"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="numberN" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="20" maxHeight="20">
+                                            0
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox  GridPane.columnIndex="0" GridPane.rowIndex="2">
+                                    <children>
+                                        <Label text="O" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="38" maxHeight="38" style="-fx-background-color: #3055FF;-fx-background-radius: 5" textFill="WHITE">
+                                            <font>
+                                                <Font size="30"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="numberO" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="20" maxHeight="20">
+                                            0
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox  GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <children>
+                                        <Label text="P" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="38" maxHeight="38" style="-fx-background-color: #3055FF;-fx-background-radius: 5" textFill="WHITE">
+                                            <font>
+                                                <Font size="30"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="numberP" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="20" maxHeight="20">
+                                            0
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox  GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                    <children>
+                                        <Label text="Q" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="38" maxHeight="38" style="-fx-background-color: #3055FF;-fx-background-radius: 5" textFill="WHITE">
+                                            <font>
+                                                <Font size="30"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="numberQ" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="20" maxHeight="20">
+                                            0
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox  GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                    <children>
+                                        <Label text="R" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="38" maxHeight="38" style="-fx-background-color: #3055FF;-fx-background-radius: 5" textFill="WHITE">
+                                            <font>
+                                                <Font size="30"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="numberR" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="20" maxHeight="20">
+                                            0
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox  GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                    <children>
+                                        <Label text="S" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="38" maxHeight="38" style="-fx-background-color: #3055FF;-fx-background-radius: 5" textFill="WHITE">
+                                            <font>
+                                                <Font size="30"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="numberS" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="20" maxHeight="20">
+                                            0
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox  GridPane.columnIndex="5" GridPane.rowIndex="2">
+                                    <children>
+                                        <Label text="T" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="38" maxHeight="38" style="-fx-background-color: #3055FF;-fx-background-radius: 5" textFill="WHITE">
+                                            <font>
+                                                <Font size="30"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="numberT" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="20" maxHeight="20">
+                                            0
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox  GridPane.columnIndex="6" GridPane.rowIndex="2">
+                                    <children>
+                                        <Label text="U" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="38" maxHeight="38" style="-fx-background-color: #3055FF;-fx-background-radius: 5" textFill="WHITE">
+                                            <font>
+                                                <Font size="30"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="numberU" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="20" maxHeight="20">
+                                            0
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox  GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <children>
+                                        <Label text="V" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="38" maxHeight="38" style="-fx-background-color: #3055FF;-fx-background-radius: 5" textFill="WHITE">
+                                            <font>
+                                                <Font size="30"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="numberV" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="20" maxHeight="20">
+                                            0
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox  GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                    <children>
+                                        <Label text="W" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="38" maxHeight="38" style="-fx-background-color: #3055FF;-fx-background-radius: 5" textFill="WHITE">
+                                            <font>
+                                                <Font size="30"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="numberW" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="20" maxHeight="20">
+                                            0
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox  GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                    <children>
+                                        <Label text="X" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="38" maxHeight="38" style="-fx-background-color: #3055FF;-fx-background-radius: 5" textFill="WHITE">
+                                            <font>
+                                                <Font size="30"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="numberX" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="20" maxHeight="20">
+                                            0
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox  GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                    <children>
+                                        <Label text="Y" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="38" maxHeight="38" style="-fx-background-color: #3055FF;-fx-background-radius: 5" textFill="WHITE">
+                                            <font>
+                                                <Font size="30"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="numberY" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="20" maxHeight="20">
+                                            0
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox  GridPane.columnIndex="5" GridPane.rowIndex="3">
+                                    <children>
+                                        <Label text="Z" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="38" maxHeight="38" style="-fx-background-color: #3055FF;-fx-background-radius: 5" textFill="WHITE">
+                                            <font>
+                                                <Font size="30"/>
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="numberZ" alignment="CENTER" minWidth="38" maxWidth="38" minHeight="20" maxHeight="20">
+                                            0
+                                        </Label>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </GridPane>
+                    </children>
+                </HBox>
+                <VBox fx:id="top4" alignment="TOP_CENTER">
+                    <VBox.margin>
+                        <Insets top="10" left="40" right="40" />
+                    </VBox.margin>
+                    <children>
+                        <Button onAction="#submitWordAction" fx:id="submitButton"  graphicTextGap="0.0" minHeight="10.0" minWidth="13.0" mnemonicParsing="false" prefHeight="40.0" style="-fx-background-color: #7085FF;-fx-background-radius: 30;-fx-background-insets: 0;" text="  Submit word  " textFill="WHITE">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button onAction="#returnToGameAction"  fx:id="errorButton"  minWidth="140.0" style="-fx-background-color: #FF8570;-fx-background-radius: 20;-fx-background-insets: 0;" text="  Return to Game  " textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+                <HBox fx:id="top5" alignment="TOP_LEFT">
+                    <VBox.margin>
+                        <Insets top="30" left="40" right="40" />
+                    </VBox.margin>
+                    <children>
+                        <Label fx:id="usedWordsLabel" wrapText="true" minWidth="280.0" maxWidth="280.0">
+                        </Label>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
+
+
